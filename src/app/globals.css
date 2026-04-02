@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 6% 21%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 6% 21%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 6% 21%;
+    --primary: 144 24% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 28% 49%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 144 10% 95%;
+    --muted-foreground: 210 6% 45%;
+    --accent: 144 15% 92%;
+    --accent-foreground: 144 24% 24%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 144 10% 85%;
+    --input: 144 10% 85%;
+    --ring: 144 24% 24%;
+    --radius: 0.625rem;
+    --chart-1: 144 24% 24%;
+    --chart-2: 120 28% 49%;
+    --chart-3: 144 20% 35%;
+    --chart-4: 120 20% 40%;
+    --chart-5: 144 15% 50%;
+  }
+
+  .dark {
+    --background: 210 6% 12%;
+    --foreground: 0 0% 95%;
+    --card: 210 6% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 210 6% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 144 24% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 28% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 6% 20%;
+    --muted-foreground: 210 6% 60%;
+    --accent: 144 15% 20%;
+    --accent-foreground: 144 24% 70%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 6% 25%;
+    --input: 210 6% 25%;
+    --ring: 144 24% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-green to-secondary-green bg-clip-text text-transparent;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Container max-width */
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Topographic background pattern */
+.topo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 25 30 50 50 T 100 50' fill='none' stroke='%232F4B3D' stroke-width='0.5' opacity='0.1'/%3E%3Cpath d='M0 60 Q 25 40 50 60 T 100 60' fill='none' stroke='%232F4B3D' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M0 40 Q 25 20 50 40 T 100 40' fill='none' stroke='%232F4B3D' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M0 70 Q 25 50 50 70 T 100 70' fill='none' stroke='%232F4B3D' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M0 30 Q 25 10 50 30 T 100 30' fill='none' stroke='%232F4B3D' stroke-width='0.5' opacity='0.06'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* Blob animation base styles */
+.blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: blobMorph 15s ease-in-out infinite;
+}
+
+.blob-1 {
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  animation-delay: -10s;
+}
+
+/* Ghost letter style */
+.ghost-letter {
+  font-size: clamp(20rem, 50vw, 40rem);
+  font-weight: 800;
+  opacity: 0.03;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.8;
+}
+
+/* Stacked images effect */
+.stacked-image {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stacked-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(47, 75, 61, 0.25);
+}
+
+/* Form focus styles */
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-2 ring-primary-green ring-offset-2;
+}
+
+/* Scroll indicator */
+.scroll-indicator::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-0.5 h-8 bg-primary-green rounded-full;
+  transform: translateX(-50%);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* Service card watermark */
+.service-watermark {
+  @apply absolute bottom-0 right-0 w-32 h-32 opacity-5;
+  pointer-events: none;
+}
+
+/* Mobile menu wave */
+.wave-clip {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 85%,
+    75% 100%,
+    50% 90%,
+    25% 100%,
+    0% 85%
+  );
+}
+
+/* QR Code floating container */
+.qr-float {
+  @apply fixed bottom-5 right-5 z-50;
+  transition: all 0.3s ease;
+}
+
+.qr-float:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Selection color */
+::selection {
+  @apply bg-secondary-green text-white;
+}
