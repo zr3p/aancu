@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://aancu.com",
     siteName: "aancu",
-    title: "aancu | Edinburgh Outdoor Services",
-    description: "Professional outdoor services in Edinburgh. Leave the outdoors to us.",
+    title: "aancu | Outdoor Services Edinburgh — Pressure Washing & Garden Care",
+    description: "Edinburgh pressure washing, garden maintenance and outdoor clearance. Professional results, straightforward pricing. Serving EH1–EH30. Get a free quote today.",
     images: [
       {
         url: "/og-image.jpg",
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "aancu | Edinburgh Outdoor Services",
-    description: "Professional outdoor services in Edinburgh. Leave the outdoors to us.",
+    title: "aancu | Outdoor Services Edinburgh — Pressure Washing & Garden Care",
+    description: "Edinburgh pressure washing, garden maintenance and outdoor clearance. Professional results, straightforward pricing. Serving EH1–EH30. Get a free quote today.",
     images: ["/og-image.jpg"],
   },
   robots: {

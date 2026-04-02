@@ -7,12 +7,12 @@
 - [ ] Trailing slashes confirmed working
 - [ ] Full SEO audit
 - [ ] All content correct
-- [ ] Test on real mobile device
 - [ ] Test contact form hitting ipa.ainic.org
-- [ ] Favicon — copy from live site public/ folder into new project public/
 
 
 # done:
+- [X] Favicon — copy from live site public/ folder into new project public/
+- [X] Test on real mobile device
 - [X] Analytics (Umami) setup and verified
 - [X] Sitemap live
 - [X] Projects section live
