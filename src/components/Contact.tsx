@@ -76,8 +76,14 @@ export function Contact() {
     e.preventDefault();
     setNewsletterStatus("submitting");
 
+    const formData = new FormData(e.currentTarget);
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      await fetch("https://ipa.ainic.org/subscribe", {
+        method: "POST",
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: { "Content-Type": "application/json" },
+      });
       setNewsletterStatus("success");
       (e.target as HTMLFormElement).reset();
     } catch {
