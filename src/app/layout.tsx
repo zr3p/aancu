@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Onest, DM_Sans, DM_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -88,6 +89,12 @@ export default function RootLayout({
         <Footer />
         <FloatingQR />
         <ScrollToTop />
+        <Script
+          defer
+          src="https://imu.ainic.org/script.js"
+          data-website-id="6d40e9f9-aeda-4943-9939-90d49e46f27b"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
