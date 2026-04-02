@@ -12,10 +12,11 @@
 - [ ] Test on real mobile device
 - [ ] Test contact form hitting ipa.ainic.org
 - [ ] Favicon — copy from live site public/ folder into new project public/
-- [ ] Add Next.js sitemap generation (next-sitemap or built-in)
-- [ ] Update robots.txt with correct sitemap URL
+
 
 # done:
+- [X] Add Next.js sitemap generation (next-sitemap or built-in)
+- [X] Update robots.txt with correct sitemap URL
 - [x] Replace all Same.new placeholders with real aancu values
 - [x] Email/phone obfuscation with real values
 - [x] FloatingQR real PNG + correct WA number
