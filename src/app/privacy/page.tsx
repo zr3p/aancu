@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | aaaaa - Edinburgh Outdoor Services",
-  description: "Privacy policy for aaaaa outdoor services. Learn how we collect, use, and protect your personal information.",
+  title: "Privacy Policy | aancu - Edinburgh Outdoor Services",
+  description: "Privacy policy for aancu outdoor services. Learn how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -17,105 +18,74 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-dark/60 font-body mb-12">
-            Last updated: {new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
+            Last updated: January 2026
           </p>
 
-          <div className="prose prose-lg max-w-none font-body text-dark/80">
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                1. Information We Collect
-              </h2>
-              <p className="mb-4">
-                When you use our services or contact us, we may collect the following information:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Name and contact details (email, phone number)</li>
-                <li>Address and property details for service delivery</li>
-                <li>Service preferences and requirements</li>
-                <li>Communication history with our team</li>
-                <li>Website usage data (via analytics)</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                2. How We Use Your Information
-              </h2>
-              <p className="mb-4">
-                We use your information to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Provide and improve our outdoor services</li>
-                <li>Communicate with you about your enquiries and bookings</li>
-                <li>Send you quotes and service-related updates</li>
-                <li>Process payments and manage accounts</li>
-                <li>Analyse website usage to improve our services</li>
-                <li>Send marketing communications (only with your consent)</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                3. Data Protection
-              </h2>
-              <p className="mb-4">
-                We take the security of your data seriously. We implement appropriate technical
-                and organisational measures to protect your personal information against unauthorised
-                access, alteration, disclosure, or destruction.
-              </p>
+          <div className="prose prose-lg max-w-none font-body text-dark/80 space-y-10">
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">Who we are</h2>
               <p>
-                We do not sell, trade, or otherwise transfer your personal information to third
-                parties without your consent, except where necessary to provide our services or
-                as required by law.
+                aancu is the trading name of Stane & Lea Ltd, registered in Scotland (SC879552).
+                Our website is aancu.com. Contact:{" "}
+                <a href="mailto:hello@aancu.com" className="text-primary-green hover:text-secondary-green transition-colors">
+                  hello@aancu.com
+                </a>.
               </p>
             </section>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                4. Cookies and Analytics
-              </h2>
-              <p className="mb-4">
-                We use privacy-focused analytics (Umami) to understand how visitors use our website.
-                This service does not use cookies and does not collect personally identifiable information.
-              </p>
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">What data we collect</h2>
               <p>
-                We may use essential cookies to ensure the proper functioning of our website.
-                These cookies do not track you across other websites.
+                When you submit an enquiry or subscribe, we collect your name, email address,
+                and any details you provide. We do not collect payment data or sensitive personal data.
               </p>
             </section>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                5. Your Rights
-              </h2>
-              <p className="mb-4">
-                Under data protection law, you have the right to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Access the personal information we hold about you</li>
-                <li>Request correction of inaccurate information</li>
-                <li>Request deletion of your personal information</li>
-                <li>Object to processing of your information</li>
-                <li>Request data portability</li>
-                <li>Withdraw consent at any time</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">
-                6. Contact Us
-              </h2>
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">How we use your data</h2>
               <p>
-                If you have any questions about this privacy policy or how we handle your data,
-                please contact us at{" "}
-                <a
-                  href="mailto:hello@aaaaa.com"
-                  className="text-primary-green hover:text-secondary-green transition-colors"
-                >
-                  hello@aaaaa.com
-                </a>
+                We use your data only to respond to your enquiry or to send occasional updates
+                if you subscribe. We do not sell, rent or share your data with third parties
+                for marketing purposes.
               </p>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">Data storage</h2>
+              <p>
+                Enquiry and subscriber data is stored securely on our private server infrastructure.
+                We retain data for up to 2 years or until you request deletion, whichever is sooner.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">Analytics</h2>
+              <p>
+                We use Umami Analytics, a privacy-friendly, cookieless tool hosted on our own server.
+                It does not track individuals and does not share data with third parties.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">Your rights</h2>
+              <p>
+                Under UK GDPR you have the right to access, correct or delete your personal data.
+                Email us and we will respond within 30 days.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-heading font-semibold text-dark mb-4">Cookies</h2>
+              <p>
+                We do not use cookies for tracking or advertising. Our analytics tool is cookieless.
+              </p>
+            </section>
+          </div>
+
+          <div className="mt-12">
+            <Link href="/" className="text-primary-green hover:text-secondary-green transition-colors font-body">
+              ← Back to home
+            </Link>
           </div>
         </div>
       </div>

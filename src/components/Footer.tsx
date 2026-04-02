@@ -20,12 +20,10 @@ export function Footer() {
   const [phone, setPhone] = useState("");
 
   useEffect(() => {
-    // Email obfuscation - assembled on client side
-    const emailParts = ["hello", "@", "aaaaa", ".", "com"];
+    const emailParts = ["hello", "@", "aancu", ".", "com"];
     setEmail(emailParts.join(""));
 
-    // Phone obfuscation - assembled on client side
-    const phoneParts = ["0131", " ", "123", " ", "4567"];
+    const phoneParts = ["07533", " ", "234", " ", "474"];
     setPhone(phoneParts.join(""));
   }, []);
 
@@ -36,7 +34,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-3xl font-heading font-bold text-white mb-4 block">
-              aaaaa
+              aancu
             </Link>
             <p className="text-white/80 font-body mb-6 max-w-md">
               Professional outdoor services for Edinburgh homes and businesses.
@@ -92,7 +90,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/44123456789"
+                  href="https://wa.me/447533234474"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors font-body text-sm flex items-center gap-2"
@@ -111,7 +109,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 font-body text-sm">
-              &copy; {new Date().getFullYear()} aaaaa. All rights reserved.
+              &copy; {new Date().getFullYear()} Stane & Lea Ltd T/A aancu. Registered in Scotland (SC879552). All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               {legalLinks.map((link) => (

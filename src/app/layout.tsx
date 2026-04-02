@@ -29,30 +29,31 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "aaaaa | Edinburgh Outdoor Services - Pressure Washing, Garden Maintenance & More",
+  metadataBase: new URL("https://aancu.com"),
+  title: "aancu | Edinburgh Outdoor Services - Pressure Washing, Garden Maintenance & More",
   description: "Professional outdoor services in Edinburgh. Pressure washing, garden maintenance, outdoor clearance, and commercial services. Covering EH1-EH30. Get a free quote today.",
   keywords: "pressure washing Edinburgh, garden maintenance Edinburgh, outdoor clearance, commercial outdoor services, driveway cleaning, patio cleaning, hedge trimming, lawn care Edinburgh",
-  authors: [{ name: "aaaaa" }],
-  creator: "aaaaa",
+  authors: [{ name: "aancu" }],
+  creator: "aancu",
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://aaaaa.com",
-    siteName: "aaaaa",
-    title: "aaaaa | Edinburgh Outdoor Services",
+    url: "https://aancu.com",
+    siteName: "aancu",
+    title: "aancu | Edinburgh Outdoor Services",
     description: "Professional outdoor services in Edinburgh. Leave the outdoors to us.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "aaaaa - Edinburgh Outdoor Services",
+        alt: "aancu - Edinburgh Outdoor Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "aaaaa | Edinburgh Outdoor Services",
+    title: "aancu | Edinburgh Outdoor Services",
     description: "Professional outdoor services in Edinburgh. Leave the outdoors to us.",
     images: ["/og-image.jpg"],
   },

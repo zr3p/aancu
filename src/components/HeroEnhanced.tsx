@@ -75,7 +75,7 @@ export function HeroEnhanced() {
           <div className={`space-y-8 ${isLoaded ? "animate-fade-up" : "opacity-0"}`}>
             <div className="space-y-2">
               <span className="inline-block font-mono text-sm text-secondary-green tracking-wider uppercase">
-                Edinburgh Outdoor Services
+                Edinburgh · Outdoor Services
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-dark leading-tight">
                 Leave the{" "}
@@ -86,8 +86,7 @@ export function HeroEnhanced() {
             </div>
 
             <p className="text-lg md:text-xl text-dark/70 font-body max-w-lg leading-relaxed">
-              Professional pressure washing, garden maintenance, and outdoor clearance
-              services across Edinburgh. No fuss, just results.
+              From pristine pressure-washed entrances to lawn care — your home and business is ready.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -163,8 +162,8 @@ export function HeroEnhanced() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                     priority={index === 0}
                   />
                   {/* Overlay gradient */}

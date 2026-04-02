@@ -2,11 +2,11 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "aaaaa",
+    name: "aancu",
     description: "Professional outdoor services in Edinburgh. Pressure washing, garden maintenance, outdoor clearance, and commercial services.",
-    url: "https://aaaaa.com",
-    telephone: "+44-131-123-4567",
-    email: "hello@aaaaa.com",
+    url: "https://aancu.com",
+    telephone: "+44-7533-234474",
+    email: "hello@aancu.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Edinburgh",

@@ -37,7 +37,7 @@ export function Header() {
             href="/"
             className="text-2xl font-heading font-bold text-primary-green hover:text-secondary-green transition-colors"
           >
-            aaaaa
+            aancu
           </Link>
 
           {/* Desktop Navigation */}
@@ -97,7 +97,7 @@ export function Header() {
             isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="wave-clip bg-primary-green/95 backdrop-blur-md rounded-2xl py-8 px-6">
+          <div className="bg-primary-green/95 backdrop-blur-md rounded-2xl py-8 px-6">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a

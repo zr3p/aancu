@@ -10,7 +10,6 @@ export function FloatingQR() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show QR after scrolling 300px
       if (window.scrollY > 300 && !isDismissed) {
         setIsVisible(true);
       } else if (window.scrollY <= 300) {
@@ -46,14 +45,19 @@ export function FloatingQR() {
 
       {/* QR Code Container */}
       <a
-        href="https://wa.me/44123456789"
+        href="https://wa.me/447533234474"
         target="_blank"
         rel="noopener noreferrer"
         className="block relative bg-white rounded-xl shadow-2xl border-2 border-primary-green p-2 hover:shadow-primary-green/20 transition-shadow"
       >
-        {/* QR Code - We'll use a generated QR code SVG */}
         <div className="w-16 h-16 md:w-20 md:h-20 relative">
-          <QRCodeSVG />
+          <Image
+            src="/qr-codes/qr_aancu_website_WhatsApp_001.png"
+            alt="Scan to message aancu on WhatsApp"
+            fill
+            sizes="80px"
+            className="object-contain"
+          />
         </div>
 
         {/* WhatsApp Icon Badge */}
@@ -76,83 +80,5 @@ export function FloatingQR() {
         </svg>
       </button>
     </div>
-  );
-}
-
-// Simple QR Code SVG component that links to WhatsApp
-function QRCodeSVG() {
-  return (
-    <svg viewBox="0 0 100 100" className="w-full h-full">
-      {/* QR Code pattern - simplified representation */}
-      <rect fill="white" width="100" height="100" />
-
-      {/* Corner patterns */}
-      <rect fill="#2F4B3D" x="5" y="5" width="25" height="25" />
-      <rect fill="white" x="8" y="8" width="19" height="19" />
-      <rect fill="#2F4B3D" x="11" y="11" width="13" height="13" />
-
-      <rect fill="#2F4B3D" x="70" y="5" width="25" height="25" />
-      <rect fill="white" x="73" y="8" width="19" height="19" />
-      <rect fill="#2F4B3D" x="76" y="11" width="13" height="13" />
-
-      <rect fill="#2F4B3D" x="5" y="70" width="25" height="25" />
-      <rect fill="white" x="8" y="73" width="19" height="19" />
-      <rect fill="#2F4B3D" x="11" y="76" width="13" height="13" />
-
-      {/* Data patterns - simplified */}
-      <rect fill="#2F4B3D" x="35" y="5" width="5" height="5" />
-      <rect fill="#2F4B3D" x="45" y="5" width="5" height="5" />
-      <rect fill="#2F4B3D" x="55" y="5" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="35" y="15" width="5" height="5" />
-      <rect fill="#2F4B3D" x="50" y="15" width="5" height="5" />
-      <rect fill="#2F4B3D" x="60" y="15" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="35" y="25" width="5" height="5" />
-      <rect fill="#2F4B3D" x="45" y="25" width="5" height="5" />
-      <rect fill="#2F4B3D" x="55" y="25" width="5" height="5" />
-
-      {/* Middle section */}
-      <rect fill="#2F4B3D" x="5" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="15" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="25" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="40" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="55" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="70" y="35" width="5" height="5" />
-      <rect fill="#2F4B3D" x="85" y="35" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="10" y="45" width="5" height="5" />
-      <rect fill="#2F4B3D" x="25" y="45" width="5" height="5" />
-      <rect fill="#2F4B3D" x="35" y="45" width="5" height="5" />
-      <rect fill="#2F4B3D" x="50" y="45" width="5" height="5" />
-      <rect fill="#2F4B3D" x="65" y="45" width="5" height="5" />
-      <rect fill="#2F4B3D" x="80" y="45" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="5" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="20" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="35" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="45" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="60" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="75" y="55" width="5" height="5" />
-      <rect fill="#2F4B3D" x="90" y="55" width="5" height="5" />
-
-      {/* Bottom section */}
-      <rect fill="#2F4B3D" x="35" y="70" width="5" height="5" />
-      <rect fill="#2F4B3D" x="50" y="70" width="5" height="5" />
-      <rect fill="#2F4B3D" x="65" y="75" width="5" height="5" />
-      <rect fill="#2F4B3D" x="80" y="70" width="5" height="5" />
-      <rect fill="#2F4B3D" x="90" y="75" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="40" y="80" width="5" height="5" />
-      <rect fill="#2F4B3D" x="55" y="80" width="5" height="5" />
-      <rect fill="#2F4B3D" x="70" y="85" width="5" height="5" />
-      <rect fill="#2F4B3D" x="85" y="80" width="5" height="5" />
-
-      <rect fill="#2F4B3D" x="35" y="90" width="5" height="5" />
-      <rect fill="#2F4B3D" x="50" y="90" width="5" height="5" />
-      <rect fill="#2F4B3D" x="60" y="90" width="5" height="5" />
-      <rect fill="#2F4B3D" x="75" y="90" width="5" height="5" />
-      <rect fill="#2F4B3D" x="90" y="90" width="5" height="5" />
-    </svg>
   );
 }

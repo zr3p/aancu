@@ -21,11 +21,11 @@ export function Contact() {
 
   useEffect(() => {
     // Email obfuscation
-    const emailParts = ["hello", "@", "aaaaa", ".", "com"];
+    const emailParts = ["hello", "@", "aancu", ".", "com"];
     setEmail(emailParts.join(""));
 
     // Phone obfuscation
-    const phoneParts = ["0131", " ", "123", " ", "4567"];
+    const phoneParts = ["07533", " ", "234", " ", "474"];
     setPhone(phoneParts.join(""));
   }, []);
 
@@ -58,16 +58,13 @@ export function Contact() {
       return;
     }
 
-    // Simulate API call (replace with actual API endpoint)
     try {
-      // In production, this would be:
-      // await fetch('https://ipa.xxxxx.org/contact', {
-      //   method: 'POST',
-      //   body: JSON.stringify(Object.fromEntries(formData)),
-      //   headers: { 'Content-Type': 'application/json' },
-      // });
+      await fetch('https://ipa.ainic.org/contact', {
+        method: 'POST',
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: { 'Content-Type': 'application/json' },
+      });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setFormStatus("success");
       (e.target as HTMLFormElement).reset();
     } catch {
@@ -104,11 +101,11 @@ export function Contact() {
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark mb-6">
-            Ready to transform your{" "}
-            <span className="text-primary-green">outdoor space</span>?
+            Let's sort your{" "}
+            <span className="text-primary-green">outdoor space.</span>
           </h2>
           <p className="text-lg text-dark/70 font-body">
-            Get a free, no-obligation quote for your project. We'll get back to you within 24 hours.
+            We aim to respond to all enquiries within one working day.
           </p>
         </div>
 
@@ -264,7 +261,7 @@ export function Contact() {
                   <span className="font-body">{phone || "Loading..."}</span>
                 </a>
                 <a
-                  href="https://wa.me/44123456789"
+                  href="https://wa.me/447533234474"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 hover:text-secondary-green transition-colors group"

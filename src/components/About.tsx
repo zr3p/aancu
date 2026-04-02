@@ -83,29 +83,26 @@ export function About() {
           <div className={`space-y-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
             <div className="space-y-4">
               <span className="inline-block font-mono text-sm text-secondary-green tracking-wider uppercase">
-                About Us
+                About aancu
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-dark">
-                Reliable outdoor services for{" "}
-                <span className="text-primary-green">Edinburgh</span>
+                Local, reliable,{" "}
+                <span className="text-primary-green">no nonsense.</span>
               </h2>
             </div>
 
             <div className="space-y-6 text-dark/70 font-body text-lg leading-relaxed">
               <p>
-                We're a local Edinburgh business dedicated to transforming outdoor spaces.
-                Whether you need your driveway pressure washed, your garden maintained,
-                or a complete outdoor clearance, we've got you covered.
+                aancu is a small Edinburgh-based outdoor services business. We keep things
+                simple: show up, do excellent work, leave your space better than we found it.
               </p>
               <p>
-                Our team uses professional-grade equipment and takes pride in delivering
-                results that exceed expectations. No job is too big or too small - from
-                residential gardens to commercial properties, we approach every project
-                with the same level of care and attention to detail.
+                We use professional-grade equipment — so you get commercial results without
+                paying commercial prices. No subcontractors, no surprises.
               </p>
               <p>
-                Based in Edinburgh, we serve all EH postcode areas from EH1 to EH30.
-                Get in touch today for a free, no-obligation quote.
+                Happy to do one-off jobs or regular maintenance. Just get in touch and
+                we'll sort something that works for you.
               </p>
             </div>
 
