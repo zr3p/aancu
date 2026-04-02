@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# aancu
 
-## Getting Started
+Website for **aancu** — Edinburgh outdoor services covering pressure washing, garden maintenance, outdoor clearance and commercial properties across EH1–EH30.
 
-First, run the development server:
+Live site: [aancu.com](https://aancu.com)  
+Designed and built by [etu.is](https://etu.is)
+
+---
+
+## Stack
+
+- [Next.js 15](https://nextjs.org) — App Router
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [Umami Analytics](https://umami.is) — self-hosted, cookieless
+- Deployed on [Netlify](https://netlify.com)
+
+---
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+```bash
+bun run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/                  # Pages and layouts (App Router)
+    projects/[slug]/    # Dynamic project pages
+    privacy/            # Privacy policy
+    terms/              # Terms of service
+    sitemap.ts          # Auto-generated sitemap
+  components/           # UI components
+  lib/
+    projects.ts         # Project data — add new projects here
+public/
+  qr-codes/            # WhatsApp QR code assets
+  images/              # Local image assets
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adding a Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open `src/lib/projects.ts` and add a new entry to the `projects` array. The project page and sitemap update automatically.
+
+---
+
+## Environment
+
+No environment variables required. Contact form posts to `https://ipa.ainic.org/contact`.
