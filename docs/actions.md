@@ -8,7 +8,10 @@
 - [ ] Analytics (Umami) setup and verified
 - [ ] Trailing slashes confirmed working
 - [ ] Full SEO audit
-- [ ] Manual deploy via Netlify
+- [ ] Site live on Netlify via GitHub
+- [ ] All content correct
+- [ ] Projects section live
+- [ ] Sitemap live
 - [ ] Test on real mobile device
 - [ ] Test contact form hitting ipa.ainic.org
 - [ ] Favicon — copy from live site public/ folder into new project public/
