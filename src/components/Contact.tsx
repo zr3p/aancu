@@ -50,23 +50,36 @@ export function Contact() {
     e.preventDefault();
     setFormStatus("submitting");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
 
-    // Check honeypot field
-    if (formData.get("website")) {
+    // Check honeypot fields
+    if ((form.elements.namedItem("website") as HTMLInputElement)?.value ||
+        (form.elements.namedItem("phone_number") as HTMLInputElement)?.value) {
       setFormStatus("error");
       return;
     }
 
     try {
-      await fetch('https://ipa.ainic.org/contact', {
-        method: 'POST',
-        body: JSON.stringify(Object.fromEntries(formData)),
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("https://ipa.ainic.org/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name:         (form.elements.namedItem("name") as HTMLInputElement).value,
+          email:        (form.elements.namedItem("email") as HTMLInputElement).value,
+          project_type: (form.elements.namedItem("service") as HTMLSelectElement).value,
+          message:      (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+          source_url:   window.location.href,
+          website:      (form.elements.namedItem("website") as HTMLInputElement).value,
+          phone_number: (form.elements.namedItem("phone_number") as HTMLInputElement).value,
+        }),
       });
 
-      setFormStatus("success");
-      (e.target as HTMLFormElement).reset();
+      if (res.ok) {
+        setFormStatus("success");
+        form.reset();
+      } else {
+        throw new Error();
+      }
     } catch {
       setFormStatus("error");
     }
@@ -76,16 +89,33 @@ export function Contact() {
     e.preventDefault();
     setNewsletterStatus("submitting");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+
+    // Check honeypot fields
+    if ((form.elements.namedItem("sub_website") as HTMLInputElement)?.value ||
+        (form.elements.namedItem("sub_phone_number") as HTMLInputElement)?.value) {
+      setNewsletterStatus("error");
+      return;
+    }
 
     try {
-      await fetch("https://ipa.ainic.org/subscribe", {
+      const res = await fetch("https://ipa.ainic.org/subscribe", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData)),
         headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email:        (form.elements.namedItem("newsletter_email") as HTMLInputElement).value,
+          source_url:   window.location.href,
+          website:      (form.elements.namedItem("sub_website") as HTMLInputElement).value,
+          phone_number: (form.elements.namedItem("sub_phone_number") as HTMLInputElement).value,
+        }),
       });
-      setNewsletterStatus("success");
-      (e.target as HTMLFormElement).reset();
+
+      if (res.ok) {
+        setNewsletterStatus("success");
+        form.reset();
+      } else {
+        throw new Error();
+      }
     } catch {
       setNewsletterStatus("error");
     }
@@ -124,14 +154,9 @@ export function Contact() {
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Honeypot field */}
-                <input
-                  type="text"
-                  name="website"
-                  className="hidden"
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
+                {/* Honeypot fields */}
+                <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
+                <input type="text" name="phone_number" className="hidden" tabIndex={-1} autoComplete="off" />
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -291,6 +316,8 @@ export function Contact() {
                 Get tips and updates on outdoor maintenance delivered to your inbox.
               </p>
               <form onSubmit={handleNewsletter} className="space-y-4">
+                <input type="text" name="sub_website" className="hidden" tabIndex={-1} autoComplete="off" />
+                <input type="text" name="sub_phone_number" className="hidden" tabIndex={-1} autoComplete="off" />
                 <input
                   type="email"
                   name="newsletter_email"
