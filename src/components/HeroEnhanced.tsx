@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const stackedImages = [
@@ -8,6 +9,7 @@ const stackedImages = [
     src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop",
     alt: "Clean driveway after pressure washing",
     tag: "Pressure Washing",
+    href: "/projects/pressure-washing/",
     rotation: -6,
     zIndex: 1,
   },
@@ -15,6 +17,7 @@ const stackedImages = [
     src: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=400&fit=crop",
     alt: "Beautiful maintained garden",
     tag: "Garden Care",
+    href: "/projects/garden-maintenance/",
     rotation: 3,
     zIndex: 2,
   },
@@ -22,6 +25,7 @@ const stackedImages = [
     src: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&h=400&fit=crop",
     alt: "Outdoor space clearance",
     tag: "Clearance",
+    href: "/projects/outdoor-clearance/",
     rotation: -2,
     zIndex: 3,
   },
@@ -29,6 +33,7 @@ const stackedImages = [
     src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
     alt: "Commercial property exterior",
     tag: "Commercial",
+    href: "/projects/commercial/",
     rotation: 5,
     zIndex: 4,
   },
@@ -145,8 +150,9 @@ export function HeroEnhanced() {
           >
             <div className="relative w-full h-full">
               {stackedImages.map((image, index) => (
-                <div
+                <Link
                   key={image.alt}
+                  href={image.href}
                   className="stacked-image absolute rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
                   style={{
                     transform: `rotate(${image.rotation}deg)`,
@@ -174,7 +180,7 @@ export function HeroEnhanced() {
                       {image.tag}
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
